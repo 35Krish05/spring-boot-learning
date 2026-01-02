@@ -1,27 +1,24 @@
-package com.example.RestApiBasic.Model;
+package com.example.JPA.Model;
 
-import java.time.LocalDateTime;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "users")
 public class User {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
+    @Column(nullable = false)
     private String username;
-    @NotBlank(message = "Email cannot be empty")
-    @Email(message = "Email format is invalid")
+    @NotBlank
+    @Email
+    @Column(nullable = false, unique = true)
     private String email;
     private LocalDateTime createdAt;
-
-    public User() {    //for creating object otherwise post request failed
-    }
-
-    public User(Long id, String username, String email, LocalDateTime createdAt) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.createdAt = createdAt;
-    }
 
     public Long getId() {
         return id;
@@ -47,6 +44,7 @@ public class User {
         this.email = email;
     }
 
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
@@ -54,5 +52,8 @@ public class User {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
-}
 
+
+
+
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a3fc3cbd-6673-4853-acb9-c88e83aed132" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/day03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/src/main/java/com/example/JPA/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/src/main/java/com/example/JPA/EmailAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/src/main/java/com/example/JPA/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/src/main/java/com/example/JPA/JpaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/src/main/java/com/example/JPA/Model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/src/main/java/com/example/JPA/Repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/src/main/java/com/example/JPA/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JPA/src/test/java/com/example/JPA/JpaApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day02/RestApiBasic/src/main/java/com/example/RestApiBasic/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day02/RestApiBasic/src/main/java/com/example/RestApiBasic/Model/User.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/JPA">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="37eMXljDqQUsoh144SeZf1wMY4R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Downloads/spring-boot-learning/day03&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a3fc3cbd-6673-4853-acb9-c88e83aed132" name="Changes" comment="" />
+      <created>1767259127612</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1767259127612</updated>
+    </task>
+    <servers />
+  </component>
+</project>
