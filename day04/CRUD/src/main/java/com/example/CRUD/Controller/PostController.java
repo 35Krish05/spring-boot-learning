@@ -1,37 +1,30 @@
 package com.example.CRUD.Controller;
 
-    import com.example.CRUD.Model.User;
-import com.example.CRUD.Service.UserService;
-import jakarta.validation.Valid;
-    import org.springframework.http.ResponseEntity;
-    import org.springframework.web.bind.annotation.*;
+import com.example.CRUD.Model.Post;
+import com.example.CRUD.Service.PostService;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
-    @RequestMapping("/api/users")
-    public class PostController {
+@RequestMapping("/api/posts")
+public class PostController {
 
-        private final UserService userService;
+    private final PostService postService;
 
-        public PostController(UserService userService) {
-            this.userService = userService;
-        }
-        @PostMapping
-        public User createUser(@Valid @RequestBody User user) {
-            return userService.createUser(user);
-        }
-        @PutMapping("/{id}")
-        public ResponseEntity<User> updateUser(
-                @PathVariable Long id,
-                @RequestBody User user) {
-
-            User updatedUser = userService.updateUser(id, user);
-            return ResponseEntity.ok(updatedUser);
-        }
-        @DeleteMapping("/{id}")
-        public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
-
-            userService.deleteUser(id);
-            return ResponseEntity.noContent().build();
-        }
-
+    public PostController(PostService postService) {
+        this.postService = postService;
     }
+
+    @GetMapping
+    public List<Post> getAllPosts() {
+        return postService.getAllPosts();
+    }
+    @PostMapping
+    public Post createPost(@RequestBody Post post) {
+        return postService.createPost(post);
+    }
+    @DeleteMapping("/{id}")
+    public void deletePost(@PathVariable Long id) {
+        postService.deletePost(id);
+    }
+}

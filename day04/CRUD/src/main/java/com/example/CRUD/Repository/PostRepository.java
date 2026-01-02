@@ -1,12 +1,7 @@
 package com.example.CRUD.Repository;
-
-
-    import com.example.CRUD.Model.User;
+import com.example.CRUD.Model.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
-
-    public interface PostRepository extends JpaRepository<User, Long> {
-        Optional<User> findByEmail(String email);
-
+import java.util.List;
+public interface PostRepository extends JpaRepository<Post, Long> {
+    List<Post> findByUserId(Long userId);
 }

@@ -1,49 +1,35 @@
 package com.example.CRUD.Service;
 
-
-import com.example.CRUD.EmailAlreadyExistsException;
-import com.example.CRUD.Model.User;
+import com.example.CRUD.Model.Post;
 import com.example.CRUD.Repository.PostRepository;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
-    public class UserService {
-
-        private final PostRepository userRepository;
-
-        public UserService(PostRepository userRepository) {
-            this.userRepository = userRepository;
-        }
-
-        public User createUser(User user) throws EmailAlreadyExistsException {
-
-            if (userRepository.findByEmail(user.getEmail()).isPresent()) {
-                throw new EmailAlreadyExistsException("Email already exists");
-            }
-
-
-            user.setCreatedAt(LocalDateTime.now());
-            return userRepository.save(user);
-        }
-        public User updateUser(Long id, User updatedUser) {
-
-            User existingUser = userRepository.findById(id)
-                    .orElseThrow(() -> new RuntimeException("User not found"));
-
-            existingUser.setUsername(updatedUser.getUsername());
-            existingUser.setEmail(updatedUser.getEmail());
-
-            return userRepository.save(existingUser);
-        }
-        public void deleteUser(Long id) {
-
-            User user = userRepository.findById(id)
-                    .orElseThrow(() -> new RuntimeException("User not found"));
-
-            userRepository.delete(user);
-        }
-
-
+public class PostService {
+    private final PostRepository postRepository;
+    public PostService(PostRepository postRepository) {
+        this.postRepository = postRepository;
     }
+    public List<Post> getAllPosts() {
+        return postRepository.findAll();
+    }
+    public Post createPost(Post post) {
+        post.setCreatedAt(LocalDateTime.now());
+        return postRepository.save(post);
+    }
+    public Post updatePost(Long id, Post updatedPost) {
+        Post existing = postRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Post not found"));
+
+        existing.setTitle(updatedPost.getTitle());
+        existing.setContent(updatedPost.getContent());
+        existing.setUpdatedAt(LocalDateTime.now());
+
+        return postRepository.save(existing);
+    }
+    public void deletePost(Long id) {
+        postRepository.deleteById(id);
+    }
+}

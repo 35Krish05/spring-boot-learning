@@ -1,61 +1,31 @@
 package com.example.CRUD.Model;
-
-
-    import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.*;
+import lombok.Data;
 import java.time.LocalDateTime;
+@Data  // does not need to getter/setter
+@Entity
+@Table(name = "posts")
+public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Entity
-    @Table(name = "users")
-    public class User {
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
-        @NotBlank
-        @Column(nullable = false)
-        private String username;
-        @NotBlank
-        @Email
-        @Column(nullable = false, unique = true)
-        private String email;
-        private LocalDateTime createdAt;
+    @Column(nullable = false)
+    private String title;
 
-        public Long getId() {
-            return id;
-        }
+    @Column(nullable = false, length = 5000)
+    private String content;
 
-        public void setId(Long id) {
-            this.id = id;
-        }
+    @Column(nullable = false)
+    private Long userId;
 
-        public String getUsername() {
-            return username;
-        }
-
-        public void setUsername(String username) {
-            this.username = username;
-        }
-
-        public String getEmail() {
-            return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
-        }
-
-
-        public LocalDateTime getCreatedAt() {
-            return createdAt;
-        }
-
-        public void setCreatedAt(LocalDateTime createdAt) {
-            this.createdAt = createdAt;
-        }
-
-
-
-
-
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
+
+
+
+
+
+
+
