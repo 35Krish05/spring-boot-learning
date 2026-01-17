@@ -21,7 +21,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         // Public GET endpoints
-                        .requestMatchers(HttpMethod.GET, "/api/posts/**","/api/posts/{id}").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/posts/**").permitAll()
 
                         // Only ADMIN can delete
                         .requestMatchers(HttpMethod.DELETE, "/api/posts/**").hasRole("ADMIN")
